@@ -1,3 +1,15 @@
+# Installation
+1. Clone the repository
+2. Create your anaconda environment
+3. Within conda, after installing PyTorch:
+```bash
+conda install -c conda-forge colorlog
+conda install gxx_linux-64 gcc_linux-64 swig
+conda update python
+pip install smac
+pip install hpbandster
+```
+
 # Running the code
 
 
