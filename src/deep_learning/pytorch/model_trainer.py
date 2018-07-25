@@ -117,7 +117,7 @@ class ModelTrainer(ModelTrainerBase):
             # print(total_norm)
 
             if self.gradient_clip != 0:
-                torch.nn.utils.clip_grad_norm(self.model.parameters(), self.gradient_clip)
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.gradient_clip)
             self.optimizer.step(progress=progress)
 
         return outputs, hidden, loss
@@ -125,7 +125,7 @@ class ModelTrainer(ModelTrainerBase):
     def _gather_results(self, ids, outputs, labels, loss, metrics):
         if self.metrics_class == MetricsSimpleLoss:
             # Save the time by not copying outputs and labels to the CPU
-            metrics.append_results(ids, None, None, loss.cpu().data.numpy()[0])
+            metrics.append_results(ids, None, None, loss.cpu().data.numpy())
         else:
-            metrics.append_results(ids, outputs.cpu().data.numpy(), labels, loss.cpu().data.numpy()[0])
+            metrics.append_results(ids, outputs.cpu().data.numpy(), labels, loss.cpu().data.numpy())
 
