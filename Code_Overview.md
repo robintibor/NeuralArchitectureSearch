@@ -14,5 +14,7 @@
 * Makes use of the `ExperimentArguments` class
 * lookup of given model name etc. is based on direct mapping of given name to module names in specific py-files (e.g.
 `model.__init__.py` for model name)
+* *Seems there is only one fixed trainer (`from src.deep_learning.pytorch.model_trainer import ModelTrainer as TrainerClass
+`), maybe there were meant to be several options?
 * *makes two parsing phases, first phase to get classes? second to get all arguments for all classes?*
 
