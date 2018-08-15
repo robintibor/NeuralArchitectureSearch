@@ -1,9 +1,9 @@
 ## Entry point
 `bayesian_optimization.py`
 * creates Experiment
-* Initializes `BayesianOptimizer` with arguments parsed by `ExperimentArguments`
+* if master: Initializes `BayesianOptimizer` with arguments parsed by `ExperimentArguments`
 class `BayesianOptimizer(**experiment.experiment_arguments.get_arguments())`
-* 
+* In any case, runs `Worker`, which will do actual training/validation afterwards
 
 ## BayesianOptimizer
 `src/hpbandster/bayesian_optimizer.py`
