@@ -19,7 +19,7 @@ dispatcher_logger = logging.getLogger('Dispatcher')
 
 class BayesianOptimizer(Master):
     """
-    This class directly uses HpBandSter library for join Architecture and Hyperparameter Network optimization.
+    This class directly uses HpBandSter library for joint Architecture and Hyperparameter Network optimization.
     It creates Config Generator object that builds a model and is used to generate new configurations.
     For better efficiency HyperBand like evaluation is used.
     """
