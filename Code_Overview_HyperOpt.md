@@ -21,7 +21,7 @@ class `BayesianOptimizer(**experiment.experiment_arguments.get_arguments())`
 `src/hpbandster/config_generator.py`
 * Uses configspace internally to describe search space
 * *Somehow needs special back-and-forth conversion for Ordinal Hyperparameters using 
-internal `OrdinalChecker` class
+internal `OrdinalChecker` class*
   * Converts first to floating between 0 and 1 `v = array[i]; n_v = (v + 0.5) / s`
   * *Unclear: guaranteed that ordinal values always start at 0?
   Or not relevant since backconversion does not depend on it?*
