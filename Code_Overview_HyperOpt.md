@@ -28,11 +28,13 @@ internal `OrdinalChecker` class*
   * `n_v = v*s - 0.5` -> should be correct inversion in any case, independent of
   which is starting value
   * *Still,what is reasoning for this back-and-forth?*
-  * *How is this even possible, since there is an exact back-and-forth conversion,
+  * `# For example if s is 4 and v in 1 then 3.5 would round to 4 but we want it to round to 3.`
+  *How is this even possible, since there is an exact back-and-forth conversion,
   if the values are integers before, they should still be integers, like 3.0,
-  not 3.5 `# For example if s is 4 and v in 1 then 3.5 would round to 4 but we want it to round to 3.`
+  not 3.5*
   * *Is it because BOHP internally treats these values as float, then samples from
-  floating range? In that case, is it problematic that many values are mapped to the same*
+  floating range? In that case, is it problematic that many values are mapped to the same
+  integer?*
    
 ## Worker
 * Runs the actual training and validation
